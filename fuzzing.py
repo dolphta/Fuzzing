@@ -11,7 +11,7 @@ for i in content.splitlines():
     url = "http://www.google.com" + str(i)
     result = requests.get(url= url, headers= header)
 
-    if "280" in str(result.status_code):
+    if "200" in str(result.status_code):
         print(url + " exists!")
     else:
         print("No file or directory.")
